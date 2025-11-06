@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Security Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Aman</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 100px;
+    }
+    .container {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align:center; margin-top:80px;">
-    <h1>Selamat Datang di Website Aman 🌐</h1>
-    <p>Website ini dilindungi dengan <b>SSL</b> dan <b>Firewall Cloudflare</b>.</p>
-    <p>Project: Penerapan SSL dan Firewall pada Aplikasi Web Berbasis Cloud.</p>
+<body>
+  <div class="container">
+    <h1>Selamat Datang di Website Aman 🔒</h1>
+    <p>Website ini dilindungi oleh <strong>SSL</strong> & <strong>Firewall Cloudflare</strong>.</p>
+    <button onclick="alert('SSL Aktif dan Aman!')">Cek Status SSL</button>
+  </div>
 </body>
 </html>
