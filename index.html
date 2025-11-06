@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Aman</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Aman</title>
   <style>
     body {
-      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #0f172a, #1e293b, #3b82f6);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
     }
-    .container {
-      background: white;
-      border-radius: 15px;
+    .login-box {
+      background: rgba(255, 255, 255, 0.1);
       padding: 30px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      display: inline-block;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
     }
     button {
-      margin-top: 20px;
-      background-color: #2b6cb0;
-      color: white;
+      width: 100%;
+      padding: 10px;
+      background: #3b82f6;
       border: none;
-      padding: 10px 20px;
       border-radius: 8px;
+      color: white;
       cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #2563eb;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Selamat Datang di Website Aman 🔒</h1>
-    <p>Website ini dilindungi oleh <strong>SSL</strong> & <strong>Firewall Cloudflare</strong>.</p>
-    <button onclick="alert('SSL Aktif dan Aman!')">Cek Status SSL</button>
+  <div class="login-box">
+    <h2>Login Aman</h2>
+    <input type="text" placeholder="Username" id="user" />
+    <input type="password" placeholder="Password" id="pass" />
+    <button onclick="login()">Masuk</button>
   </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("user").value;
+      const pass = document.getElementById("pass").value;
+      if (user && pass) {
+        window.location.href = "home.html";
+      } else {
+        alert("Silakan isi Username dan Password!");
+      }
+    }
+  </script>
 </body>
 </html>
